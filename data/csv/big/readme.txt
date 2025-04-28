@@ -1,1 +1,0 @@
-This is a folder that should contain only big csv files (> 30 MB) - these files are ignored at commit and push.
