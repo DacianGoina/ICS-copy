@@ -19,7 +19,8 @@ x_train, x_test = split_into_2_samples(data_as_values, size= 0.9, shuffle_seed=1
 **Instantiate an ICS model**
 ```
 # instantiate a model such that:
-	- the model uses 15 estimators, each estimator is trained on a minimum of 4 features and a maximum of 14 features
+	- the model uses 15 estimators
+	- each estimator is trained on a minimum of 4 features and a maximum of 14 features
 	- a sample from dataset is considered as being anomalous if it contains anomalous values in at least 10 features (from all 24 features)
 	- 3% of (artifically-labeled) anomalous samples are used in for the training 
 
@@ -36,7 +37,7 @@ ics_model.transform()
 
 **Usage of prediction function**
 ```
-# for anomalous score threshold use value of the 98th percentile (obtained from trained data) 
+# as anomalous score threshold use value of the 98th percentile (obtained from trained data) 
 
 ics_labels = ics_model.predicts(x_test, percentile_rank=98)
 print(ics_labels[0:10])
