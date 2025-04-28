@@ -1,6 +1,6 @@
 # Ideal Centroid Striving: An Unsupervised and Prediction Parameterized Anomaly Detection Method
 
-This repository contains Python implementation for the Ideal Centroid Striving classification method presented in the paper *Ideal Centroid Striving: An Unsupervised and Prediction Parameterized Anomaly Detection Method* (ref. below).
+This repository contains Python implementation for the Ideal Centroid Striving classification method presented in the paper *Ideal Centroid Striving: An Unsupervised and Prediction Parameterized Anomaly Detection Method* **(ref. below)**.
 
 ## Usage example
 The following code snippets are examples of instantiating, training, and using the model. These code snippets are from *src/main/main.py*.
@@ -41,6 +41,8 @@ ics_model.transform()
 
 ics_labels = ics_model.predicts(x_test, percentile_rank=98)
 print(ics_labels[0:10])
+
+# output value 1 means anomalous sample, value 0 means non-anomalous sample
 ```
 
 ## Access the paper
